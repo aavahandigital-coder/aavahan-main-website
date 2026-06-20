@@ -137,7 +137,7 @@ export default function Hero() {
   style={{ marginBottom: 20 }}
 >
   <img
-    src="public/logo.png"
+    src="/logo.png"
     alt="Aavahan"
     className="hero-logo"
   />

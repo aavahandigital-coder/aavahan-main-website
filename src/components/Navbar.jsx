@@ -59,7 +59,7 @@ export default function Navbar() {
     }}
   >
     <img
-      src="public/logo-mark(2).png"
+      src="/logo-mark(2).png"
       alt="Aavahan"
       style={{
         width: 42,
