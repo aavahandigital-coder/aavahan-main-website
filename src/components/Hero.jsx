@@ -207,28 +207,27 @@ For Life's Most Meaningful Celebrations
         <motion.p
   style={{
     fontFamily: "'DM Sans', sans-serif",
-    fontSize: 'clamp(0.95rem, 1.7vw, 1rem)',
+    fontSize: 'clamp(0.9rem, 2vw, 1rem)',
     color: 'var(--text-mid)',
-    maxWidth: '1600px',
+    maxWidth: '800px',
     margin: '0 auto 36px',
     lineHeight: 1.9,
-    textAlign: 'left',
-
+    textAlign: 'center',
+    padding: '0 20px',
   }}
 >
-  <>
-  Beautiful invitation websites, digital cards, and celebration experiences created for life's special moments
-  <br />  
-  <span style={{ paddingLeft: '220px' }}>
+  Beautiful invitation websites, digital cards, and celebration experiences
+  <br />
+  created for life's special moments.
+  <br />
+  <span className="hero-line-2">
     Thoughtfully crafted with elegance and care
   </span>
   <br />
-  <span style={{ paddingLeft: '280px' }}>
-    To bring hearts together
+  <span className="hero-line-3">
+    to bring hearts together.
   </span>
-</>
 </motion.p>
-
         {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
