@@ -186,7 +186,6 @@ export default function Hero() {
             fontSize: 'clamp(1.1rem, 3vw, 1.75rem)',
             fontWeight: 300,
             color: 'var(--rose-gold)',
-            fontWeight: 400,
             letterSpacing: '0.04em',
             marginBottom: 20,
           }}
