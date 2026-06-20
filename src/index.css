@@ -1,0 +1,168 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ivory:     #FFF8F0;
+  --cream:     #FFFDF8;
+  --blush:     #F8E7E7;
+  --rose-gold: #C8956C;
+  --soft-gold: #D4AF6A;
+  --beige:     #EDE0D4;
+  --deep-rose: #8B3A2A;
+  --text-main: #3D2B1F;
+  --text-mid:  #7A5A4A;
+  --text-light:#A08070;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ivory);
+  color: var(--text-main);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--rose-gold); border-radius: 4px; }
+
+/* Selection */
+::selection { background: var(--blush); color: var(--deep-rose); }
+
+/* Font helpers */
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-dm { font-family: 'DM Sans', sans-serif; }
+
+/* Gold divider */
+.gold-divider {
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--soft-gold), transparent);
+  margin: 0 auto;
+}
+
+/* Section label */
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 253, 248, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 106, 0.18);
+}
+
+/* Shimmer button */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #D4AF6A 0%, #C8956C 50%, #D4AF6A 100%);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(200,149,108,0.35);
+}
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid rgba(200,149,108,0.5);
+  color: var(--rose-gold);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-secondary:hover {
+  background: var(--blush);
+  border-color: var(--rose-gold);
+  transform: translateY(-2px);
+}
+
+/* Card shadow */
+.card-shadow { box-shadow: 0 4px 24px rgba(200,149,108,0.1); }
+.card-shadow-hover { box-shadow: 0 16px 48px rgba(200,149,108,0.25); }
+
+/* Petal animation */
+@keyframes petalFall {
+  0%   { transform: translateY(-8vh) rotate(0deg) scale(0.6); opacity: 0; }
+  8%   { opacity: 0.75; }
+  92%  { opacity: 0.35; }
+  100% { transform: translateY(108vh) rotate(600deg) scale(0.4); opacity: 0; }
+}
+
+/* Float animation */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(3deg); }
+}
+
+/* Spin slow */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Fade up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer sweep */
+@keyframes shimmerSweep {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Tag chip */
+.tag-chip {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  color: var(--text-light);
+  background: rgba(248,231,231,0.6);
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Image placeholder bg */
+.img-placeholder {
+  background: linear-gradient(135deg, var(--blush) 0%, var(--beige) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose-gold);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+}
+.hero-logo {
+  width: 130px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.98;
+  filter: drop-shadow(
+    0 6px 24px rgba(200,149,108,0.12)
+  );
+}
