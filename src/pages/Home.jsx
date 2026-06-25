@@ -6,6 +6,7 @@ import Process      from '../components/Process.jsx'
 import CTA          from '../components/CTA.jsx'
 import Testimonials from '../components/Testimonials.jsx'
 import FAQ          from '../components/FAQ.jsx'
+import InfiniteGallery from "../components/InfiniteGallery";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -17,6 +18,8 @@ export default function Home() {
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants}>
       <Hero />
+      <InfiniteGallery/>
+
       <Services />
       <WhyAavahan />
       <Process />
