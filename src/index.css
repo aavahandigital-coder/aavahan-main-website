@@ -266,3 +266,42 @@ body {
     opacity:0;
   }
 }
+/* ============================= */
+/* Mobile responsive additions   */
+/* ============================= */
+
+/* Prevent horizontal overflow on all screens */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Hero logo mobile override */
+@media (max-width: 639px) {
+  .hero-logo {
+    width: 90px !important;
+    margin-bottom: 4px;
+  }
+
+  /* Ensure buttons are tappable touch targets */
+  .btn-primary,
+  .btn-secondary {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Tighten section padding on mobile */
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Tablet range */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-logo {
+    width: 110px !important;
+  }
+}
